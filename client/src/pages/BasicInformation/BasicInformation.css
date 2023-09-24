@@ -1,0 +1,64 @@
+.basicProfileContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+}
+.basicProfileWrapper {
+  width: 35%;
+  margin: 50px auto;
+  padding: 30px;
+  position: relative;
+}
+.basicProfileTitle {
+  text-align: center;
+  color: #1775ee;
+  margin-bottom: 25px;
+}
+.eachbasicProfileItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.basicProfileLabel {
+  flex: 1;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1775ee;
+}
+.inputBox {
+  flex: 2;
+}
+.basicProfileInput {
+  width: 100%;
+  font-size: 18px;
+  border: none;
+  padding: 7px 5px;
+  border-radius: 2px;
+}
+.basicProfileInput:focus {
+  outline: none;
+}
+.basicProfileButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+.basicProfileButton {
+  background-color: #1775ee;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.errorOccured {
+  color: red;
+  display: block;
+}
+.basicErrorComponent {
+  color: white;
+  background-color: red;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+}

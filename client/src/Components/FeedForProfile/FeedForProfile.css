@@ -1,0 +1,9 @@
+.feedBar {
+  flex: 5.5;
+}
+.noPost {
+  margin-top: 30px;
+  margin-left: 30px;
+  text-align: start;
+  color: red;
+}

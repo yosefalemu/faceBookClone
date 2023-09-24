@@ -1,0 +1,89 @@
+.profile {
+  display: flex;
+}
+.profileRight {
+  flex: 9;
+  overflow-x: hidden;
+}
+
+.profileImageContainer {
+  position: relative;
+  margin-bottom: 70px;
+}
+.profileCoverImage {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+.profileUserImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 250px;
+  margin: auto;
+  border: 4px solid white;
+  object-fit: cover;
+}
+.profileUserInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.profileUserName {
+  font-size: 24px;
+}
+.profileUserDescription {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.profileRightBottom {
+  display: flex;
+}
+.profileUserStatus {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 50px;
+}
+.profileUserStatusItem {
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
+  cursor: default;
+  background-color: #1775ee;
+  color: white;
+  padding: 8px 20px;
+}
+.ProfileUserStatusValue {
+  font-weight: 200;
+  margin-left: 5px;
+  font-size: 22px;
+}
+.startChatButton {
+  display: flex;
+  align-items: center;
+  background-color: #1775ee;
+  border: none;
+  border-radius: 3px;
+}
+.chatIcon {
+  margin-right: 20px;
+  color: white;
+}
+.chatButtonText {
+  color: white;
+  font-size: 18px;
+}
+.viewProfileButton {
+  display: flex;
+  align-items: center;
+  background-color: #1775ee;
+  border: none;
+  border-radius: 3px;
+}

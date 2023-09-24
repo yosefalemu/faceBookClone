@@ -1,0 +1,42 @@
+.friendRequestListItem {
+  border: 1px solid lightgray;
+  padding: 15px 50px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.2);
+}
+.friendRequestTop {
+  display: flex;
+  align-items: center;
+}
+.friendRequestBottom {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+}
+.confirmButton {
+  padding: 7px 15px;
+  font-size: 22px;
+  border: none;
+  background-color: #1775ee;
+  color: white;
+  margin-right: 20px;
+}
+.cancelButton {
+  padding: 7px 15px;
+  font-size: 22px;
+  border: none;
+  background-color: red;
+  color: white;
+}
+.friendRequestImg {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 25px;
+  border: 2px solid black;
+}

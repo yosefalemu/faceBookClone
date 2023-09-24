@@ -1,0 +1,59 @@
+.completeProfileContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+}
+.completeProfileWrapper {
+  width: 35%;
+  margin: 50px auto;
+  padding: 30px;
+  position: relative;
+}
+.completeProfileTitle {
+  text-align: center;
+  color: #1775ee;
+  margin-bottom: 25px;
+}
+.eachCompleteProfileItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.completeProfileLabel {
+  flex: 1;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1775ee;
+}
+.completeProfileInput {
+  flex: 2;
+  font-size: 18px;
+  border: none;
+  padding: 7px 5px;
+  border-radius: 2px;
+}
+.completeProfileInput:focus {
+  outline: none;
+}
+.completeProfileButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+.completeProfileButton {
+  background-color: #1775ee;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.skipCss {
+  position: absolute;
+  top: 30px;
+  right: -200px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #1775ee;
+}

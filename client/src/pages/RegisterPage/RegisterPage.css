@@ -1,0 +1,87 @@
+.Register {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.RegisterWrapper {
+  width: 70%;
+  height: 70%;
+  display: flex;
+}
+.RegisterLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.RegisterRight {
+  margin-top: 4%;
+  flex: 1;
+}
+.RegisterBox {
+  height: 450px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.RegisterLogo {
+  font-size: 50px;
+  font-weight: 800;
+  color: #1775ee;
+  margin-bottom: 10px;
+}
+.RegisterDesc {
+  font-size: 24px;
+}
+.RegisterInput {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-size: 18px;
+  padding-left: 20px;
+}
+.RegisterInput:focus {
+  outline: none;
+}
+.RegisterButton {
+  height: 50px;
+  background-color: #1775ee;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.RegisterForget {
+  text-align: center;
+  color: #1775ee;
+}
+.RegisterCreate {
+  height: 50px;
+  width: 50%;
+  align-self: center;
+  background-color: #42b72a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.errorOccured {
+  color: red;
+}
+.errorComponent {
+  background-color: red;
+  color: white;
+  padding: 10px 30px;
+  margin-bottom: 50px;
+}

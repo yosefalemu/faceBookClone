@@ -1,0 +1,19 @@
+.rightProfileContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+.rightProfileImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid gray;
+}
+.rightProfileUserName {
+  font-size: 14px;
+  margin-top: 3px;
+  text-align: center;
+  font-weight: 500;
+}

@@ -1,0 +1,20 @@
+.friendsListPage {
+  width: 100%;
+  height: fit-content;
+  background-color: white;
+}
+.friendListWrapper {
+  display: flex;
+}
+.friendListContainer {
+  margin-top: 20px;
+  padding: 20px 30px;
+  flex: 4;
+}
+.friendListTitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.friendList {
+  list-style: none;
+}

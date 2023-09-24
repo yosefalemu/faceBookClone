@@ -1,0 +1,52 @@
+.sideBar {
+  flex: 3;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  position: sticky;
+  top: 50px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+.sideBarWrapper {
+  padding: 20px;
+  height: fit-content;
+}
+.sideBarList {
+  list-style: none;
+  font-size: 22px;
+}
+.sideBarListItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+  cursor: pointer;
+}
+.sideBarListItem:hover {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 30px;
+}
+.sideBarIcon {
+  margin-right: 15px;
+}
+.sideBarButton {
+  margin-left: 25px;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: none;
+  font-weight: bold;
+  border-radius: 7px;
+}
+.sideBarFriendList {
+  margin-top: 20px;
+}
+.findFriendsTitle {
+  margin-top: 10px;
+}

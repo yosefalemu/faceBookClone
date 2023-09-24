@@ -1,0 +1,86 @@
+.navbarContainer {
+  height: 55px;
+  width: 100%;
+  background-color: #1877f2;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navBarLeft {
+  flex: 3;
+}
+.navBarCenter {
+  flex: 5;
+}
+.navBarRight {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navBarImage {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.navBarLogo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.searchBar {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+.searchInput {
+  width: 70%;
+  border: none;
+  font-size: 18px;
+}
+.searchInput:focus {
+  outline: none;
+}
+.searchIcon {
+  margin-left: 20px;
+}
+.navBarLink {
+  margin-right: 10px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+.navBarIcons {
+  display: flex;
+}
+.navBarIcon {
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+}
+/* .navBarBadgeIcon {
+  background-color: red;
+  color: white;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  font-size: 12px;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.navIcon {
+  color: white;
+}

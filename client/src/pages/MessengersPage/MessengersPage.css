@@ -1,0 +1,85 @@
+.messenger {
+  height: calc(100vh - 55px);
+  display: flex;
+}
+.chatMenu {
+  flex: 3.5;
+}
+.chatBox {
+  flex: 5.5;
+}
+.chatOnline {
+  flex: 3;
+}
+.chatMenuWrapper,
+.chatBoxWrapper,
+.chatOnlineWrapper {
+  padding: 10px;
+  height: calc(100% - 50px);
+}
+.chatMenuWrapper {
+  padding-top: 0px;
+}
+.chatBoxWrapper {
+  padding-top: 0px;
+  position: relative;
+}
+.chatBoxTop {
+  height: 80%;
+  padding: 10px 20px 0px 5px;
+  overflow-y: scroll;
+}
+.chatMenuInput {
+  width: 90%;
+  padding: 10px 0px 10px 8px;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  height: 5%;
+}
+.chatMenuInput:focus {
+  outline: none;
+}
+.conversationWrapper {
+  overflow-y: scroll;
+  height: 95%;
+}
+.chatBoxBottom {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px 0px 30px;
+}
+.chatMessageInput {
+  width: 75%;
+  height: 90px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 15px;
+}
+.chatMessageInput:focus {
+  outline: none;
+}
+.chatSubmitButton {
+  width: fit-content;
+  height: 40px;
+  padding: 0px 50px;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 115, 255, 0.853);
+  color: white;
+  font-size: 22px;
+  border-radius: 10px;
+}
+.chatOnlineWrapper {
+  overflow-y: scroll;
+}
+.noConversation {
+  position: absolute;
+  color: lightgray;
+  top: 10%;
+  font-size: 25px;
+  text-align: center;
+  cursor: default;
+}

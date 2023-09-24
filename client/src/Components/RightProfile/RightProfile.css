@@ -1,0 +1,51 @@
+.rightProfile {
+  margin-left: 40px;
+  margin-top: 20px;
+  flex: 3;
+  overflow-y: scroll;
+  position: sticky;
+  top: 50px;
+  height: calc(100vh - 50px);
+}
+.rightProfileWholeContainer {
+  display: flex;
+}
+
+.userInfoContainer {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.userInfoItem {
+  display: flex;
+  margin-bottom: 9px;
+  align-items: center;
+}
+.userInfo {
+  font-weight: bold;
+  margin-right: 5px;
+  font-size: 20px;
+}
+.userInfoValue {
+  font-size: 18px;
+}
+.seaparationLine {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 7px;
+}
+.rightProfileTitle {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.buttonContainer {
+  display: flex;
+}
+.completeProfileButton {
+  font-size: 18px;
+  margin: 7px 10px;
+  padding: 8px;
+  border: 0.5px solid gray;
+}
+.emptyButton {
+  display: none;
+}

@@ -1,0 +1,21 @@
+.sideBarFriendListItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.sideBarFriendListItem:hover {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 30px;
+}
+.SideBarFriendImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.sideBarFriendName {
+  font-size: 22px;
+  font-weight: 500;
+}

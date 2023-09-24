@@ -1,0 +1,49 @@
+.conversation {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 20px;
+  position: relative;
+  background-color: rgb(238, 232, 232);
+}
+.conversationTop {
+  display: flex;
+  align-items: center;
+}
+.conversation:hover {
+  background-color: rgb(246, 244, 244);
+}
+.conversationImage {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.conversationName {
+  font-size: 24px;
+}
+.conversationBottom {
+  text-align: end;
+}
+.numberOfUnViewedMessages {
+  background-color: red;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 5px;
+  right: 20px;
+}
+.noNewMessage {
+  display: none;
+}
+.numberOfNewMessageText {
+  color: white;
+}
