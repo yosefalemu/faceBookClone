@@ -8,7 +8,7 @@
 }
 .RegisterWrapper {
   width: 70%;
-  height: 70%;
+  height: 80%;
   display: flex;
 }
 .RegisterLeft {
@@ -84,4 +84,12 @@
   color: white;
   padding: 10px 30px;
   margin-bottom: 50px;
+}
+.emailsent {
+  background-color: rgb(8, 145, 19);
+  color: white;
+  padding: 10px 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: 500;
 }

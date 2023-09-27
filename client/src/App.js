@@ -10,6 +10,7 @@ import FriendsPage from "./pages/FriendsPage/FriendsPage";
 import FollowersPage from "./pages/FollowersPage/FollowersPage";
 import FollowingsPage from "./pages/FollowingsPage/FollowingsPage";
 import MessengersPage from "./pages/MessengersPage/MessengersPage";
+import VerificationPage from "./pages/VerificationPage/VerificationPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/followers" element={<FollowersPage />} />
         <Route path="/followings" element={<FollowingsPage />} />
         <Route path="/messenger" element={<MessengersPage />} />
+        <Route path="/:id/verifyemail/:token" element={<VerificationPage />} />
       </Routes>
     </Router>
   );

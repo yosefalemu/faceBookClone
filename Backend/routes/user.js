@@ -11,6 +11,7 @@ const {
   getSingleUser,
   addFriend,
   addFollower,
+  verifyEmail,
 } = require("../controllers/user");
 
 router.route("/register").post(createUser);
@@ -22,5 +23,6 @@ router.route("/addtionalinfo/:id").patch(updateUserAdditionalInfo);
 router.route("/allupdate/:id").patch(updateAllUserInformation);
 router.route("/addfriend/:id").patch(addFriend);
 router.route("/follow/:id").patch(addFollower);
+router.route("/:id/verifyemail/:token").get(verifyEmail);
 
 module.exports = router;

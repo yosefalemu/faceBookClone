@@ -78,7 +78,7 @@ const LogInPage = () => {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">JossySocial</h3>
+          <h3 className="loginLogo">YBS_SOCIAL</h3>
           <span className="loginDesc">
             Connect with friends and world around you on the JossySocial
           </span>

@@ -1,0 +1,26 @@
+.verifycontainer {
+  width: 100vw;
+  height: 100vh;
+}
+.verifywrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.imgcontainer {
+}
+.verifyimage {
+  width: 400px;
+  height: 400px;
+}
+.loginbutton {
+  background-color: green;
+  color: white;
+  padding: 5px 35px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

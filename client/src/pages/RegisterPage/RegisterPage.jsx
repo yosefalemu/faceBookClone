@@ -1,25 +1,12 @@
 import { useState } from "react";
 import "./RegisterPage.css";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import {
-  loginStart,
-  loginSuccess,
-  loginFail,
-  setSkipForNowController,
-  fromSignUp,
-} from "../../redux-toolkit/userSlice";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  setNumberOfFriendRequest,
-  setLoading,
-  removeLoading,
-} from "../../redux-toolkit/userSlice";
+import { loginStart, loginFail } from "../../redux-toolkit/userSlice";
+import { useDispatch } from "react-redux";
+import { setNumberOfFriendRequest } from "../../redux-toolkit/userSlice";
 import axios from "axios";
-import LoadingComponent from "../../Components/Loading/Loading";
 
 const RegisterPage = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
@@ -27,38 +14,30 @@ const RegisterPage = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const loading = useSelector((state) => state.user.loading);
-  // dispatch(removeLoading());
+  const [isEmailSent, setIsEmailSent] = useState(false);
 
   const createAccount = async (e) => {
     e.preventDefault();
-    dispatch(setLoading());
     dispatch(loginStart());
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/v1/user/register",
-        {
-          name,
-          username,
-          email,
-          password,
-          confirmPassword,
-        }
-      );
-      dispatch(loginSuccess(res.data));
+      await axios.post("http://localhost:5000/api/v1/user/register", {
+        name,
+        username,
+        email,
+        password,
+        confirmPassword,
+      });
+      // dispatch(loginSuccess(res.data));
       dispatch(setNumberOfFriendRequest(0));
-      navigate("/basicinformation");
-      dispatch(removeLoading());
+      setIsEmailSent(true);
+      // navigate("/basicinformation");
     } catch (error) {
       setErrorMessage(error.response.data.msg.split(",")[0]);
-      dispatch(removeLoading());
       dispatch(loginFail());
     }
   };
 
-  return loading ? (
-    <LoadingComponent />
-  ) : (
+  return (
     <div className="Register">
       <div className="RegisterWrapper">
         <div className="RegisterLeft">
@@ -179,6 +158,11 @@ const RegisterPage = () => {
               </Link>
             </button>
           </div>
+          {isEmailSent && (
+            <h3 className="emailsent">
+              Verification link is send to your gmail account
+            </h3>
+          )}
         </div>
       </div>
     </div>

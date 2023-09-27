@@ -1,5 +1,6 @@
 const UserSchema = require("../models/user");
 const { BadRequestError, UnauthenticatedError } = require("../errors");
+const sendEmail = require("../utils/sendEmail");
 
 // @desc    Register a new user
 // @route   POST /api/v1/users/register
@@ -24,13 +25,22 @@ const createUser = async (req, res) => {
     }
   }
   const user = await UserSchema.create(req.body);
+
   if (user) {
+    const token = user.createJWT();
+    user.token = token;
+    await user.save();
+    const verificationLink = `http://localhost:3000/${user._id}/verifyemail/${token}`;
+
+    //Send the verification link to the user's email
+
+    await sendEmail(user.email, "Verify Email", verificationLink);
     res.status(201).json({
       _id: user._id,
       name: user.name,
       username: user.username,
       email: user.email,
-      token: user.createJWT(),
+      token,
     });
   } else {
     res.status(400);
@@ -49,7 +59,7 @@ const loginUser = async (req, res) => {
   if (!password) {
     throw new BadRequestError("password required");
   }
-  const user = await UserSchema.findOne({ email });
+  const user = await UserSchema.findOne({ email, emailverified: true });
   if (!user) {
     throw new UnauthenticatedError("Invalid creditials");
   }
@@ -65,10 +75,34 @@ const loginUser = async (req, res) => {
       friends: user.friends,
       followers: user.followers,
       following: user.following,
-      token: user.createJWT(),
+      token: user.token,
     });
   } else {
     throw new UnauthenticatedError("wrong password");
+  }
+};
+// @desc    Verify User Email
+// @route   PATCH /api/v1/user/:id/verify-email/:token
+// @access  Public
+const verifyEmail = async (req, res) => {
+  const user = await UserSchema.findOne({
+    _id: req.params.id,
+    token: req.params.token,
+  });
+  if (user) {
+    const updatedUser = await UserSchema.findByIdAndUpdate(
+      req.params.id,
+      { emailverified: true },
+      { runValidators: true, new: true }
+    );
+    if (!updatedUser) {
+      throw new UnauthenticatedError("User not found");
+    }
+    const userWithoutPassword = { ...updatedUser.toObject() };
+    delete userWithoutPassword.password;
+    res.status(200).json(userWithoutPassword);
+  } else {
+    throw new UnauthenticatedError("invalid credintial");
   }
 };
 // @desc    Update user for the basic information and online status
@@ -290,6 +324,7 @@ const addFollower = async (req, res) => {
 module.exports = {
   createUser,
   loginUser,
+  verifyEmail,
   updateUserBasicInfo,
   updateUserAdditionalInfo,
   updateAllUserInformation,

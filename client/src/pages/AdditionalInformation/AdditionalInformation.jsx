@@ -21,7 +21,6 @@ const CompleteProfilePage = () => {
 
   const currentUserId = useSelector((state) => state.user.currentUser._id);
   const loading = useSelector((state) => state.user.loading);
-  const { skipForNowController } = useSelector((state) => state.user);
 
   const uploadFileHandlerProfile = async (e) => {
     e.preventDefault();
@@ -132,12 +131,10 @@ const CompleteProfilePage = () => {
             Review
           </button>
         </div>
-      </div>
-      {skipForNowController && (
         <Link Link to="/homepage" className="skipCss">
           Skip For Now
         </Link>
-      )}
+      </div>
     </div>
   );
 };

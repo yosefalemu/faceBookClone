@@ -37,7 +37,14 @@ const UserSchema = new mongoose.Schema(
       ],
       unique: true,
     },
-
+    emailverified: {
+      type: Boolean,
+      default: false,
+    },
+    token: {
+      type: String,
+      default: "",
+    },
     password: {
       type: String,
       minlength: [6, "password must be minimum length of 6"],

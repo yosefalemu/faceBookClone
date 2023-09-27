@@ -29,9 +29,6 @@ app.use("/api/v1/post", postRoute);
 app.use("/api/v1/message", messageRoute);
 app.use("/api/v1/conversation", conversationRoute);
 
-// const dirname = path.resolve();
-// app.use("/uploads", express.static(path.join(dirname, "/uploads")));
-
 app.use(notFoundMiddleWare);
 app.use(errorHandlerMiddleware);
 
